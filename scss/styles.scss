@@ -1,3 +1,300 @@
 @import './variables';
-@import './margins';
-@import './mobile'; 
+@import './globals';
+
+body {
+
+    margin: 80px auto;
+    font-family: $fontInter;
+
+    header {
+        padding-bottom: 60px;
+
+        img {
+            padding-left: 4px;
+        }
+
+        .menu {
+            margin: auto;
+            padding: 0 4px;
+
+            nav {
+                a {
+                    color: $darkGrayishBlue;
+    
+                    padding-left: 48px;
+                    padding: auto;
+                }
+            }
+        }
+    }
+
+    main {
+
+        .popular-topic {
+            padding: 32px 0;
+
+            h1 {
+                margin-right: 36px;
+            }
+
+            .popular-article {
+                padding-left: 24px;
+            }
+
+            button {
+                font-size: 12px;
+                letter-spacing: 6px;
+                font-weight: 700;
+                color: $offWhite;
+                background-color: $softRed;
+                text-transform: uppercase;
+                border: none;
+                padding: 12px 36px;
+                margin-top: 12px;
+            }
+        }
+
+        .new-topic {
+            background-color: $veryDarkBlue;
+            margin: auto;
+            padding: 32px 24px 20px 24px;
+
+            div {
+                padding: 12px 0;
+            }
+            h2 {
+                color: $softOrange;
+                padding-bottom: 12px;
+            }
+            h5 {
+                margin-bottom: 12px;
+                color: $offWhite;
+            }
+            hr {
+                color: $offWhite;
+            }
+            p {
+                color: $grayishBlue;
+                margin: 0;
+            }
+        }
+
+        .tech-news {
+            margin-top: 32px;
+
+            .article {
+                padding: 0 36px 0 24px;
+                margin: auto;
+            
+                img {
+                    height: 130px;
+                    margin: auto;
+                }
+                h4 {
+                    font-size: 32px;
+                    color: $grayishBlue;
+                }
+                h5 {
+                    font-size: 18px;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+    
+    footer {
+        text-align: center;
+        padding-top: 52px;
+        a {
+            color: $softRed;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        --bs-gutter-x: 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    body {
+        margin: 6px 0;
+
+        #overlay {
+            position: fixed; /* Sit on top of the page content */
+            width: calc(100%-70vw); /* Full width (cover the whole page) */
+            height: 100%; /* Full height (cover the whole page) */
+            top: 0;
+            left: 0;
+            right: 70vw;
+            bottom: 0;
+            z-index: 2;
+            background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        }
+
+        header {
+            padding: 32px 0 16px 0;
+
+            .logo {
+                img {
+                    height: 28px;
+                    padding-left: 1rem;
+                }
+            }
+            #hamburger {
+                height: 18px;
+                margin: auto;
+                padding: 0 16px;
+            }
+            .menu {
+                display: none;
+                position: absolute;
+                height: 100vh;
+                width: 70vw;
+                left: 30vw; 
+                background-color: white;
+                #close-menu {
+                    width: 36px;
+                    position: absolute;
+                    right: 24px;
+                    z-index: 2;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-top: 108px;
+                    a {
+                        padding: 12px 24px;
+                        color: $veryDarkBlue;
+                    }
+                }
+                #overlay {
+                    position: fixed;
+                    display: none;
+                    width: 30vw; /* Full width (cover the whole page) */
+                    height: 100%; /* Full height (cover the whole page) */
+                    top: 0;
+                    left: 0;
+                    right: 70vw;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+                }    
+                #overlay.active {
+                    display: block;
+                }
+            }
+            .menu.active {
+                display: block;
+            }
+        }
+
+        main {
+            .popular-topic {
+                h1 {
+                    margin: 0;
+                    font-size: 40px;
+                    letter-spacing: 0;
+                }
+                .popular-article {
+                    padding-left: 0;
+
+                    p {
+                        margin: 24px 0;
+                        line-height: 2;
+                    }
+
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+            .new-topic {
+                padding: 24px 24px 12px 24px;
+            }
+            .tech-news {
+                margin-top: 12px;
+                .flex {
+                    padding: 12px 0;
+                    .flex-direction-col {
+                        padding: 0 8px 0 24px;
+                    }
+                    img {
+                        height: 110px;
+                    }
+                    h4 {
+                        font-size: 24px;
+                    }
+                    h5 {
+                        font-size: 15px;
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 2;
+                    }
+                }
+            }
+        }
+        footer {
+            padding-top: 24px;
+            p {
+                font-size: 12px;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile {
+        display: none;
+    }
+    body {
+        header {
+            .menu {
+                nav {
+                    a:hover {
+                        color: $softRed;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        main {
+            .popular-topic {
+                button:hover {
+                    background-color: $veryDarkBlue;
+                    cursor: pointer;
+                }
+            }
+            .new-topic {
+                h5:hover {
+                    color: $softOrange;
+                    cursor: pointer;
+                }
+            }
+            .tech-news {
+                h5:hover {
+                    color: $softRed;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        footer {
+            a:hover {
+                color: $softRed;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+

@@ -1,1 +1,328 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+main.container {
+  padding: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extraBold {
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.paraFont {
+  font-size: 15px;
+  color: #5d5f79;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-dir-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body {
+  margin: 80px auto;
+  font-family: "Inter", sans-serif;
+}
+
+body header {
+  padding-bottom: 60px;
+}
+
+body header img {
+  padding-left: 4px;
+}
+
+body header .menu {
+  margin: auto;
+  padding: 0 4px;
+}
+
+body header .menu nav a {
+  color: #5d5f79;
+  padding-left: 48px;
+  padding: auto;
+}
+
+body main .popular-topic {
+  padding: 32px 0;
+}
+
+body main .popular-topic h1 {
+  margin-right: 36px;
+}
+
+body main .popular-topic .popular-article {
+  padding-left: 24px;
+}
+
+body main .popular-topic button {
+  font-size: 12px;
+  letter-spacing: 6px;
+  font-weight: 700;
+  color: #fffdfa;
+  background-color: #f15e50;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 36px;
+  margin-top: 12px;
+}
+
+body main .new-topic {
+  background-color: #00001a;
+  margin: auto;
+  padding: 32px 24px 20px 24px;
+}
+
+body main .new-topic div {
+  padding: 12px 0;
+}
+
+body main .new-topic h2 {
+  color: #e9ab53;
+  padding-bottom: 12px;
+}
+
+body main .new-topic h5 {
+  margin-bottom: 12px;
+  color: #fffdfa;
+}
+
+body main .new-topic hr {
+  color: #fffdfa;
+}
+
+body main .new-topic p {
+  color: #c5c6ce;
+  margin: 0;
+}
+
+body main .tech-news {
+  margin-top: 32px;
+}
+
+body main .tech-news .article {
+  padding: 0 36px 0 24px;
+  margin: auto;
+}
+
+body main .tech-news .article img {
+  height: 130px;
+  margin: auto;
+}
+
+body main .tech-news .article h4 {
+  font-size: 32px;
+  color: #c5c6ce;
+}
+
+body main .tech-news .article h5 {
+  font-size: 18px;
+}
+
+body main .tech-news .article p {
+  margin: 0;
+}
+
+body footer {
+  text-align: center;
+  padding-top: 52px;
+}
+
+body footer a {
+  color: #f15e50;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    --bs-gutter-x: 0;
+  }
+  .desktop {
+    display: none;
+  }
+  body {
+    margin: 6px 0;
+  }
+  body #overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    width: calc(100%-70vw);
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 70vw;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+  }
+  body header {
+    padding: 32px 0 16px 0;
+  }
+  body header .logo img {
+    height: 28px;
+    padding-left: 1rem;
+  }
+  body header #hamburger {
+    height: 18px;
+    margin: auto;
+    padding: 0 16px;
+  }
+  body header .menu {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 70vw;
+    left: 30vw;
+    background-color: white;
+  }
+  body header .menu #close-menu {
+    width: 36px;
+    position: absolute;
+    right: 24px;
+    z-index: 2;
+  }
+  body header .menu nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 108px;
+  }
+  body header .menu nav a {
+    padding: 12px 24px;
+    color: #00001a;
+  }
+  body header .menu #overlay {
+    position: fixed;
+    display: none;
+    width: 30vw;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 70vw;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+  }
+  body header .menu #overlay.active {
+    display: block;
+  }
+  body header .menu.active {
+    display: block;
+  }
+  body main .popular-topic h1 {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 0;
+  }
+  body main .popular-topic .popular-article {
+    padding-left: 0;
+  }
+  body main .popular-topic .popular-article p {
+    margin: 24px 0;
+    line-height: 2;
+  }
+  body main .popular-topic .popular-article button {
+    margin: 0;
+  }
+  body main .new-topic {
+    padding: 24px 24px 12px 24px;
+  }
+  body main .tech-news {
+    margin-top: 12px;
+  }
+  body main .tech-news .flex {
+    padding: 12px 0;
+  }
+  body main .tech-news .flex .flex-direction-col {
+    padding: 0 8px 0 24px;
+  }
+  body main .tech-news .flex img {
+    height: 110px;
+  }
+  body main .tech-news .flex h4 {
+    font-size: 24px;
+  }
+  body main .tech-news .flex h5 {
+    font-size: 15px;
+  }
+  body main .tech-news .flex p {
+    font-size: 13px;
+    line-height: 2;
+  }
+  body footer {
+    padding-top: 24px;
+  }
+  body footer p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+  body header .menu nav a:hover {
+    color: #f15e50;
+    cursor: pointer;
+  }
+  body main .popular-topic button:hover {
+    background-color: #00001a;
+    cursor: pointer;
+  }
+  body main .new-topic h5:hover {
+    color: #e9ab53;
+    cursor: pointer;
+  }
+  body main .tech-news h5:hover {
+    color: #f15e50;
+    cursor: pointer;
+  }
+  body footer a:hover {
+    color: #f15e50;
+    text-decoration: underline;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

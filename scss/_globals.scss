@@ -1,0 +1,46 @@
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+
+main {
+    &.container {
+        padding: 0;
+    }
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.extraBold {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+.paraFont {
+    font-size: 15px;
+    color: $darkGrayishBlue;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-dir-col {
+    display: flex;
+    flex-direction: column;
+}
